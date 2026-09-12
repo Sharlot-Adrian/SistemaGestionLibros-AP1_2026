@@ -1,5 +1,6 @@
 ﻿namespace RegistroLibros.Context;
 using Microsoft.EntityFrameworkCore;
+using RegistroLibros.Models;
 
 public class Contexto: DbContext 
 {
@@ -7,6 +8,8 @@ public class Contexto: DbContext
     {
         
     }
+
+    public DbSet<Libro> Libros { get; set; }
 
 
 }

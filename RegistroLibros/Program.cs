@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-var ConStr = builder.Configuration.GetConnectionString("SqlConStr");
+var ConStr = builder.Configuration.GetConnectionString("ConStr");
 builder.Services.AddDbContext<Contexto>(c => c.UseSqlite(ConStr));
 
 var app = builder.Build();
