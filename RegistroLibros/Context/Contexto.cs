@@ -1,6 +1,13 @@
-﻿namespace RegistroLibros.Context
+﻿namespace RegistroLibros.Context;
+using Microsoft.EntityFrameworkCore;
+
+public class Contexto: DbContext 
 {
-    public class DbContext
+    public Contexto(DbContextOptions<Contexto> options) : base(options)
     {
+        
     }
+
+
 }
+
